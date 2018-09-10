@@ -1,0 +1,2 @@
+#!/bin/bash
+alias cdg='cd $({ git rev-parse --git-dir 2>&- || echo .; } | xargs dirname)'
