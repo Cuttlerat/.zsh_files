@@ -13,7 +13,7 @@ ZSH_THEME="agnoster"
 DEFAULT_USER=$(whoami)
 alias vim='emacs -nw'
 
-source ~/.zshrc_dir/*
+source ./*
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
