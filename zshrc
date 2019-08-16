@@ -11,7 +11,6 @@ export TERM="xterm-256color"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 DEFAULT_USER=$(whoami)
-alias vim='emacs -nw'
 
 source ~/.zsh_files/source/*
 
@@ -76,6 +75,14 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+if [[ ! "${TMUX}" ]]; then
+    if ! tmux has-session -t main; then
+        tmux new-session -s main
+    else
+        tmux attach -t main
+    fi
+fi
 
 # User configuration
 
